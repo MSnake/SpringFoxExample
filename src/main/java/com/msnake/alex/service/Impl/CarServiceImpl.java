@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Order service impl
+ * Car service impl
  *
  * @author shigaevak
  * @since 29.05.2017
