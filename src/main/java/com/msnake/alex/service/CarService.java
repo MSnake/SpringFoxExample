@@ -3,7 +3,7 @@ package com.msnake.alex.service;
 import com.msnake.alex.model.Car;
 
 /**
- * Order service
+ * Car service
  *
  * @author shigaevak
  * @since 29.05.2017

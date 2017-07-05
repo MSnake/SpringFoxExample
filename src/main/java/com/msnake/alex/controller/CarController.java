@@ -77,12 +77,12 @@ public class CarController {
     @PostMapping
     @ApiOperation(value = "Create new car")
     @ApiResponses(value = {
-            @ApiResponse(code = 201, message = "Success to create new car", response = Car.class),
+            @ApiResponse(code = 201, message = "Success to create new car", response = Integer.class),
             @ApiResponse(code = 500, message = "Server error")
     })
     public ResponseEntity create(@RequestBody Car car) {
         try {
-            return new ResponseEntity(carService.create(car), HttpStatus.CREATED);
+            return new ResponseEntity(carService.create(car).getId(), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }

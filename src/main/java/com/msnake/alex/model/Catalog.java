@@ -9,10 +9,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Order Model
+ * Catalog model
  *
  * @author shigaevak
- * @since 29.05.2017
+ * @since 05.07.2017
  */
 @Setter
 @Getter
@@ -23,34 +23,27 @@ import java.io.Serializable;
 @Builder
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
-@Table(name = "car")
-@ApiModel(value = "Car")
-public class Car implements Serializable{
+@Table(name = "catalog")
+@ApiModel(value = "Catalog")
+public class Catalog implements Serializable {
 
     /**
-     * Car id
+     * Catalog id
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(value = "Car Id", dataType = "Integer")
+    @ApiModelProperty(value = "Catalog Id", dataType = "Integer")
     private Integer id;
 
     /**
-     * Car name
+     * Catalog name
      */
-    @ApiModelProperty(value = "Car name", dataType = "String")
+    @ApiModelProperty(value = "Catalog name", dataType = "String")
     private String name;
 
     /**
-     * Car full name
+     * Catalog head Id
      */
-    @ApiModelProperty(value = "Car full name", dataType = "String")
-    private String fullName;
-
-    /**
-     * Catalog
-     */
-    @ApiModelProperty(value = "Catalog for car", dataType = "Catalog")
-    private Catalog catalog;
-
+    @ApiModelProperty(value = "Catalog head Id", dataType = "Integer")
+    private Integer headId;
 }
